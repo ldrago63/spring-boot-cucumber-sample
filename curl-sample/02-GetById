@@ -1,0 +1,5 @@
+echo -e "Try to get person with id $1\n"
+
+curl --request GET http://localhost:8080/api/persons/$1
+
+echo -e "\n\nEnd of request."

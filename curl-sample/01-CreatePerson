@@ -1,0 +1,8 @@
+echo -e "Try to create a person\n"
+
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"firstName":"Lucas","lastName":"DRAGO", "birthDate":"1990-06-11"}' \
+  http://localhost:8080/api/persons
+
+echo -e "\n\nEnd of creation."

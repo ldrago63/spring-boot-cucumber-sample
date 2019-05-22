@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/test/resources/features"})
-@SpringBootTest(classes = CucumberSampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = CucumberSampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ContextConfiguration
 public class CucumberITests {
 }

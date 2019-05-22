@@ -5,9 +5,11 @@ import com.ldrago.sample.cucumbersample.controllers.api.PersonsController;
 import com.ldrago.sample.cucumbersample.documents.Persons;
 import com.ldrago.sample.cucumbersample.repositories.PersonsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api/persons")
 public class PersonsControllerImpl implements PersonsController {
 
 

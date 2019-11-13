@@ -1,14 +1,13 @@
 package com.ldrago.sample.cucumbersample.cucumber.steps;
 
-import com.ldrago.sample.cucumbersample.cucumber.CucumberConfiguration;
 import com.ldrago.sample.cucumbersample.repositories.PersonsRepository;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FirstSteps extends CucumberConfiguration {
+public class FirstSteps {
 
     @Autowired
     private PersonsRepository personsRepository;

@@ -1,18 +1,17 @@
 package com.ldrago.sample.cucumbersample.cucumber.steps;
 
 
-import com.ldrago.sample.cucumbersample.cucumber.CucumberConfiguration;
 import com.ldrago.sample.cucumbersample.cucumber.clients.PersonsClient;
 import com.ldrago.sample.cucumbersample.documents.Persons;
 import com.ldrago.sample.cucumbersample.documents.PersonsBuilder;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class PersonsSteps extends CucumberConfiguration {
+public class PersonsSteps {
 
     private SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
 

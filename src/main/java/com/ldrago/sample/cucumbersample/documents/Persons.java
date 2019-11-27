@@ -45,7 +45,7 @@ public class Persons {
         this.lastName = lastName;
     }
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone="UTC")
     public Date getBirthDate() {
         return birthDate;
     }

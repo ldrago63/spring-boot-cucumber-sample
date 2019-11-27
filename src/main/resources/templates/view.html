@@ -1,0 +1,24 @@
+<td xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <div th:if="${person == null}">
+        <span id="result">User not found</span>
+    </div>
+    <div th:if="${person != null}">
+        <span id="result">User found</span>
+
+        <table>
+            <thead>
+            <tr>
+                <th>fistname</th>
+                <th>lastname</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td id=firstname th:text="${person.getFirstName()}"></td>
+                <td id=lastname  th:text="${person.getLastName()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</td>

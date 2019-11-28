@@ -5,6 +5,9 @@ import org.junit.runner.notification.RunNotifier;
 import org.junit.runners.model.InitializationError;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
+import org.openqa.selenium.WebDriver;
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +22,7 @@ public class CucumberReporter extends Cucumber {
     public void run(RunNotifier notifier) {
         super.run(notifier);
         generateReport();
+        closeBrowser();
     }
 
     public static void generateReport() {
@@ -31,5 +35,9 @@ public class CucumberReporter extends Cucumber {
 
         ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
         reportBuilder.generateReports();
+    }
+
+    private void closeBrowser() {
+        SpringContext.getBean(WebDriver.class).quit();
     }
 }

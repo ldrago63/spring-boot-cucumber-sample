@@ -5,6 +5,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class DisplayPersonPage {
 
+    @FindBy(id = "result")
+    private WebElement result;
+
     @FindBy(id = "firstname")
     private WebElement displayedFirstName;
 
@@ -30,5 +33,13 @@ public class DisplayPersonPage {
 
     public void setDisplayedLastName(WebElement displayedLastName) {
         this.displayedLastName = displayedLastName;
+    }
+
+    public WebElement getResult() {
+        return result;
+    }
+
+    public void setResult(WebElement result) {
+        this.result = result;
     }
 }

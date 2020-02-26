@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 import java.util.UUID;
 
@@ -14,8 +15,10 @@ public class Persons {
     @Id
     private String id;
 
+    @NotBlank
     private String firstName;
 
+    @NotBlank
     private String lastName;
 
     private Date birthDate;

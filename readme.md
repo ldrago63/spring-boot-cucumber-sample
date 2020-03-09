@@ -28,19 +28,24 @@ Selenium java web pages used by steps are in test package :
 
 #### Annoted scenario with *@webui* take automatically a browser screenshot for report when scenario fails.
 
-#### Web driver are automatically installed by the magical webdrivermanager project of Boni García [https://github.com/bonigarcia](https://github.com/bonigarcia)
-
-The used browser is defined in *SeleniumConfiguration* class and can be replaced :
-
-    @Configuration
-    public class SeleniumConfiguration {
-	    @Bean
-	    public WebDriver webDriver() {
-	        WebDriverManager.chromedriver().setup();
-	        return new ChromeDriver();
-	    }
-    }
-
 #### To launch this sample, just use :
 
     mvn clean install
+
+#### Web driver are automatically installed by the magical webdrivermanager project of Boni García [https://github.com/bonigarcia](https://github.com/bonigarcia)
+
+The used browser is defined in *SeleniumConfiguration* with maven -DBROWSER option. Default used browser is Chrome. To chose another during test phase use :
+
+    mvn clean install -DBROWSER=Firefox
+    mvn clean install -DBROWSER=InternetExplorer
+    mvn clean install -DBROWSER=Edge
+
+
+#### To launch only api tests, run :
+
+    mvn clean install -Dcucumber.options="--tags @api" 
+
+
+#### To launch only ui tests, run :
+
+    mvn clean install -DBROWSER=Chrome -Dcucumber.options="--tags @webui"

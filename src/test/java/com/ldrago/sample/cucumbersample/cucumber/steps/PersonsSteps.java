@@ -71,6 +71,13 @@ public class PersonsSteps {
         }
     }
 
+    @When("I get the last created person by id.")
+    public void getLastPersonStep() {
+        apiResponse = client.get(apiResponse.getId());
+    }
+
+
+
     @Then("A person is returned with first '(.*)', last name '(.*)' and birth date '(.*)'.")
     public void assertReturn(String firstName, String lastName, String birthDate) throws ParseException {
         assertThat(apiResponse.getFirstName()).isEqualTo(firstName);

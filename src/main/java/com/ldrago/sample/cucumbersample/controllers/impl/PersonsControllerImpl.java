@@ -32,7 +32,7 @@ public class PersonsControllerImpl implements PersonsController {
     @Override
     public Persons get(String id) {
         Optional<Persons> persons = repository.findById(id);
-        if(persons.isEmpty()) {
+        if(!persons.isPresent()) {
             throw new PersonNotFoundException();
         }
         return persons.get();

@@ -49,3 +49,14 @@ The used browser is defined in *SeleniumConfiguration* with maven -DBROWSER opti
 #### To launch only ui tests, run :
 
     mvn clean install -DBROWSER=Chrome -Dcucumber.options="--tags @webui"
+
+
+
+#### Bonus build this spring app in docker image :
+
+    mvn clean install && docker build -t ldrago/demo-spring .
+    
+and run 
+
+    docker run -d --name=demo-spring -p 8080:8080 ldrago/demo-spring
+

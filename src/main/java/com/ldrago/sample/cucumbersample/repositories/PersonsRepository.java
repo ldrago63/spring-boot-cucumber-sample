@@ -1,7 +1,7 @@
 package com.ldrago.sample.cucumbersample.repositories;
 
 import com.ldrago.sample.cucumbersample.documents.Persons;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface PersonsRepository extends MongoRepository<Persons, String> {
+public interface PersonsRepository extends CrudRepository<Persons, String> {
 }
